@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+  <!-- ========================================== -->
+  <!-- META DATA & STYLESHEETS                    -->
+  <!-- ========================================== -->
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="author" content="Kenrie Vandekerckhove">
+  <meta name="author" content="Janus Schaltin">
+  <title>Chiro 'Tzawèzien Eernegem</title>
+  
+  <link rel="stylesheet" href="./media/css/styles.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Work+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+  <!-- ========================================== -->
+  <!-- HEADER & NAVIGATION                        -->
+  <!-- ========================================== -->
+  <header>
+    <div class="navbar">
+      <a href="./index.html" class="logo">
+        <img src="./media/pictures/logo.png" alt="Logo Chiro 'Tzawèzien Eernegem" style="height:40px; width:auto; border-radius:6px;"> 
+        Chiro Eernegem
+      </a>
+      <nav>
+        <ul>
+          <li><a href="./agenda.html">Agenda</a></li>
+          <li><a href="./leiding.html">Leiding</a></li>
+          <li><a href="./info.html">Info</a></li>
+          <li><a href="./kamp.html">Kamp</a></li>
+          <li><a href="./contact.html">Contact</a></li>
+          <li><a href="https://leiding.chiroeernegem.be" aria-label="Login"><i class="fa-solid fa-lock"></i></a></li>
+        </ul>
+      </nav>
+      <a href="https://inschrijven.chiroeernegem.be/leden" class="nav-cta">Inschrijven</a>
+      <button class="menu-toggle"><i class="fa-solid fa-bars"></i></button>
+    </div>
+  </header>
+
+  <!-- ========================================== -->
+  <!-- HERO SECTION: BINNENKORT BESCHIKBAAR       -->
+  <!-- ========================================== -->
+  <section class="hero" style="min-height: 65vh; display: flex; align-items: center;">
+    <svg class="trail" viewBox="0 0 1120 500" preserveAspectRatio="none" aria-hidden="true">
+      <path d="M -20 420 Q 200 380 350 440 T 700 400 T 1140 460" stroke="#E8A33D" stroke-width="3" stroke-dasharray="2 14" fill="none" stroke-linecap="round"/>
+    </svg>
+    <div class="wrap">
+      <div class="eyebrow">Nog even geduld</div>
+      <h1>Binnenkort<br><span>beschikbaar.</span></h1>
+      <p>We werken momenteel achter de schermen om deze informatie aan te vullen. Kom binnenkort nog eens terug voor de laatste updates!</p>
+      <div class="hero-actions">
+        <a href="./index.html" class="btn btn-primary">Terug naar home ↗</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========================================== -->
+  <!-- FOOTER                                     -->
+  <!-- ========================================== -->
+  <footer id="contact">
+    <div class="wrap">
+      <div class="footer-top">
+        <div>
+          <div class="footer-brand">Chiro Eernegem</div>
+          <div class="social">
+            <a href="https://www.facebook.com/chiroeernegem/" aria-label="Facebook"><i class="fa-brands fa-facebook"></i></a>
+            <a href="https://www.instagram.com/chiro.eernegem/" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+            <a href="https://www.tiktok.com/@chiro.eernegem" aria-label="TikTok"><i class="fa-brands fa-tiktok"></i></a>
+          </div>
+        </div>
+        <div class="footer-cols">
+          <div class="footer-col">
+            <h4>Verkennen</h4>
+            <ul>
+              <li><a href="./agenda.html">Agenda</a></li>
+              <li><a href="./leiding.html">Leiding</a></li>
+              <li><a href="./info.html">Praktische info</a></li>
+              <li><a href="./kamp.html">Kamp</a></li>
+            </ul>
+          </div>
+          <div class="footer-col">
+            <h4>Contact</h4>
+            <ul>
+              <li><i class="fa-solid fa-map-pin"></i> Bruggestraat 110, 8480 Eernegem</li>
+              <li><i class="fa-solid fa-envelope"></i> chiro.tzawezien@gmail.com</li>
+              <li><i class="fa-solid fa-lock"></i> <a href="https://leiding.chiroeernegem.be">Leiding login</a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <span>© 2026 Chiro 'Tzawèzien Eernegem</span>
+        <a href="./contact.html">Contact</a>
+      </div>
+    </div>
+  </footer>
+
+  <!-- ========================================== -->
+  <!-- JAVASCRIPT                                 -->
+  <!-- ========================================== -->
+  <script>
+    const menuToggle = document.querySelector('.menu-toggle');
+    const navMenu = document.querySelector('nav ul');
+
+    menuToggle.addEventListener('click', () => {
+      navMenu.classList.toggle('active');
+      
+      const icon = menuToggle.querySelector('i');
+      if (navMenu.classList.contains('active')) {
+        icon.classList.remove('fa-bars');
+        icon.classList.add('fa-xmark');
+      } else {
+        icon.classList.remove('fa-xmark');
+        icon.classList.add('fa-bars');
+      }
+    });
+  </script>
+</body>
+</html>
